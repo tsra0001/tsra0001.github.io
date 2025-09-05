@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Tsrangalov - HZ ICT Student Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head> 
+<body>
+    <div class="navbar">
+        <ul>
+            <h2><a href="index.html">Ivan Tsrangalov</a></h2>
+            <li><a href="profile.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </div>
+
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Hello, I'm Ivan</h1>
+            <p class="role">HZ Student</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2>Why ICT is Perfect for Me</h2>
+                
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=250&fit=crop&crop=center" alt="Students collaborating on programming projects">
+                    <div class="image-overlay">Collaborative Learning at HZ</div>
+                </div>
+
+                 <p>Coming from a strong foundation in Computer Programming and Innovation, the HBOICT programme at HZ represents the perfect next step in my educational journey. What excites me most is how the programme builds upon my existing technical skills while introducing advanced concepts in software architecture, project management, and business applications.</p>
+
+                <p>The hands-on, project-based approach aligns perfectly with my learning style. Having already experienced the power of practical programming through my vocational education, I'm eager to tackle more complex, real-world challenges that the HBOICT programme offers. The emphasis on both technical excellence and professional skills development will prepare me for leadership roles in the ICT industry.</p>
+            </div>
+
+            <div class="card">
+                <h2>Why ICT Drives My Passion</h2>
+
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=250&fit=crop&crop=center" alt="Modern programming setup with multiple monitors">
+                    <div class="image-overlay">My Development Environment</div>
+                </div>
+
+                <p>ICT isn't just my field of study—it's where my analytical mind meets creative problem-solving. With experience in multiple programming languages from C++ to Python, and web technologies like JavaScript, HTML, and CSS, I've discovered that each technology offers unique ways to solve problems and create solutions that matter.</p>
+
+                <p>What I love most about ICT is its versatility and constant evolution. One day I might be optimizing database queries with SQL, the next I could be deploying applications on Azure cloud services. This variety keeps me engaged and constantly learning, which perfectly matches my curious nature and desire for continuous growth in technology.</p>
+
+                <div class="links-section">
+                    <a href="profile.html" class="secondary-link">About Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling for any internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Add parallax effect to floating elements
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallax = document.querySelectorAll('.floating-element');
+                const speed = 0.5;
+
+                parallax.forEach(element => {
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+            });
+
+            // Add interactive effects to skill items
+            const skillItems = document.querySelectorAll('.skill-item');
+            skillItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.05) rotateZ(5deg)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1) rotateZ(0deg)';
+                });
+            });
+
+            // Add hover effect to cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add typing effect to the name
+            const nameElement = document.querySelector('.hero h1');
+            const originalText = nameElement.textContent;
+            nameElement.textContent = '';
+            
+            setTimeout(() => {
+                let i = 0;
+                const typeWriter = setInterval(() => {
+                    nameElement.textContent += originalText.charAt(i);
+                    i++;
+                    if (i >= originalText.length) {
+                        clearInterval(typeWriter);
+                    }
+                }, 100);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
