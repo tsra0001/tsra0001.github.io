@@ -18,6 +18,9 @@ body {
 }
 
 .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -106,6 +109,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideInLeft 0.8s ease-out;
+    margin-top: 40px;
 }
 
 .intro-section {
@@ -257,7 +261,115 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+/* FAQ css */
+
+.wrap{
+    max-width: 900px; 
+    margin:0 auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 28px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.question{
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+    border:1px solid rgba(15,23,42,0.04);
+}
+
+.q
+{
+    font-weight:600; margin:0 0 8px;
+    color: #4a5568;
+    font-size: 1.3em;
+}
+
+.a
+{
+    color: #2d3748; 
+    margin: 0; 
+    font-size: 0.95rem; 
+    line-height: 1.45
+}
+
+/* left items sit in column 1; right items sit in column 2 */
+.item.left{grid-column:1; margin-right: 30px;}  
+.item.right{grid-column:2; margin-left: 30px;}
+
+@media (max-width:680px)
+{
+    .grid{grid-template-columns:1fr;}
+    .item.right, .item.left{grid-column:auto}
+}
+
+/* small helper styles for icons/labels */
+.small{display:inline-block; font-size:1; padding:4px 8px; border-radius:999px; background:rgba(15,23,42,0.04); color: #6b7280; margin-bottom:10px}
+
+/* Dashboard */
+
+.study-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.study-table th, .study-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.study-table th {
+  background-color: #667eea;
+  color: white;
+}
+
+.sufficient {
+  background-color: #c6f6d5; /* green */
+  color: #22543d;
+  font-weight: bold;
+}
+
+.insufficient {
+  background-color: #fed7d7; /* red */
+  color: #742a2a;
+  font-weight: bold;
+}
+
+.pending {
+  background-color: #fefcbf; /* yellow */
+  color: #744210;
+  font-weight: bold;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  background: #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px 0 20px;
+  height: 25px;
+}
+
+.progress {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+  height: 100%;
+}
+
+@media (max-width: 768px) 
+{
     .content-grid {
         grid-template-columns: 1fr;
         gap: 30px;
