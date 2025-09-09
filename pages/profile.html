@@ -6,9 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Ivan Tsrangalov - HZ ICT Student Portfolio</title>
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/slider.css">
+        <script src="../js/slider.js"></script>
     </head>
     <body>
-        <div class="navbar">
+        <div class="navbar"> 
             <ul>
                 <h2><a href="index.html">Ivan Tsrangalov</a></h2>
                 <li><a href="profile.html">Home</a></li>
@@ -18,8 +20,105 @@
             </ul>
         </div>
 
-        <div class="profile-image">
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" width="100px" height="100px">
+        <div class="container">
+            <div class="content-grid">
+                
+                <div class="card">
+                    <h2>Ivan Tsrangalov</h2>
+                    
+                    <div class="profile-image">
+                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" width="100px" height="100px">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Certificates</h2>
+                    
+                    <div class="slider-container">
+                    <div class="slider-header">
+                        <h2>📈 Market Insights Slider</h2>
+                        <p>Trending images with stock market-style continuous scrolling</p>
+                    </div>
+                    
+                    <div class="ticker-wrapper" id="tickerWrapper">
+                        <div class="ticker" id="ticker">
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=300&h=200&fit=crop" alt="Stock Chart">
+                                <div class="overlay">
+                                    <h3>Market Analysis</h3>
+                                    <p>Latest trends and insights</p>
+                                </div>
+                            </div>
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=300&h=200&fit=crop" alt="Business Meeting">
+                                <div class="overlay">
+                                    <h3>Business Growth</h3>
+                                    <p>Strategic planning sessions</p>
+                                </div>
+                            </div>
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=300&h=200&fit=crop" alt="Technology">
+                                <div class="overlay">
+                                    <h3>Tech Innovation</h3>
+                                    <p>Future of digital markets</p>
+                                </div>
+                            </div>
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Data Analytics">
+                                <div class="overlay">
+                                    <h3>Data Analytics</h3>
+                                    <p>Making sense of big data</p>
+                                </div>
+                            </div>
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" alt="Financial Charts">
+                                <div class="overlay">
+                                    <h3>Financial Reports</h3>
+                                    <p>Quarterly earnings analysis</p>
+                                </div>
+                            </div>
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop" alt="Global Markets">
+                                <div class="overlay">
+                                    <h3>Global Markets</h3>
+                                    <p>International trade insights</p>
+                                </div>
+                            </div>
+                            <!-- Duplicate items for seamless loop -->
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=300&h=200&fit=crop" alt="Stock Chart">
+                                <div class="overlay">
+                                    <h3>Market Analysis</h3>
+                                    <p>Latest trends and insights</p>
+                                </div>
+                            </div>
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=300&h=200&fit=crop" alt="Business Meeting">
+                                <div class="overlay">
+                                    <h3>Business Growth</h3>
+                                    <p>Strategic planning sessions</p>
+                                </div>
+                            </div>
+                            <div class="ticker-item">
+                                <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=300&h=200&fit=crop" alt="Technology">
+                                <div class="overlay">
+                                    <h3>Tech Innovation</h3>
+                                    <p>Future of digital markets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button class="control-btn" onclick="togglePause()">⏯️ Pause/Play</button>
+                        <button class="control-btn" onclick="changeSpeed()">⚡ Speed: <span id="speedText">1x</span></button>
+                        <button class="control-btn" onclick="reverseDirection()">🔄 Reverse</button>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
         </div>
     </body>
 </html>

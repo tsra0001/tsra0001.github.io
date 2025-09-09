@@ -1,0 +1,165 @@
+.slider-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.slider-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.slider-header h2 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.slider-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1em;
+}
+
+.ticker-wrapper {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.ticker-wrapper::before,
+.ticker-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.ticker-wrapper::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.3), transparent);
+}
+
+.ticker-wrapper::after {
+    right: 0;
+    background: linear-gradient(-90deg, rgba(0,0,0,0.3), transparent);
+}
+
+.ticker {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.ticker-item {
+    flex-shrink: 0;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.ticker-item:hover {
+    transform: scale(1.05);
+}
+
+.ticker-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.ticker-item:hover img {
+    transform: scale(1.1);
+}
+
+.ticker-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.ticker-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.ticker-item .overlay h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.ticker-item .overlay p {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-300px * 6 - 30px * 6));
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    backdrop-filter: blur(10px);
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.speed-indicator {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.paused .ticker {
+    animation-play-state: paused;
+}
+
+.speed-1x .ticker { animation-duration: 25s; }
+.speed-2x .ticker { animation-duration: 12.5s; }
+.speed-3x .ticker { animation-duration: 8.33s; }
