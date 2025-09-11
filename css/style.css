@@ -166,7 +166,7 @@ body {
 
 .image-container img {
     width: 100%;
-    height: 250px;
+    height: 180px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -370,7 +370,7 @@ body {
 
 /* Blog post */
 .blog-feed {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -395,7 +395,7 @@ body {
 .blog-post h2 {
     color: #4a5568;
     margin-bottom: 15px;
-    font-size: 1.8em;
+    font-size: 2em;
     border-bottom: 3px solid #667eea;
     padding-bottom: 10px;
 }
