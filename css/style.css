@@ -1,9 +1,11 @@
+/* Global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling with gradient background */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -11,12 +13,14 @@ body {
     overflow-x: hidden;
 }
 
+/* Main content container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Fixed navigation bar */
 .navbar {
     position: fixed;
     width: 100%;
@@ -27,11 +31,13 @@ body {
     background-color: #505b8d;
 }
 
+/* Navigation list items float right */
 .navbar ul li{
     float: right;
     list-style-type: none;
 }
 
+/* Logo/brand floats left */
 .navbar h2{
     float: left;
     padding-top: 0.3rem;
@@ -52,6 +58,7 @@ body {
   background-color: #505b8d;
 }
 
+/* Navigation link styling */
 .navbar ul li a {
     list-style-type: none;
   display: block;
@@ -65,6 +72,7 @@ body {
   background-color: #534b92;
 }
 
+/* Hero section with animations */
 .hero {
     text-align: center;
     color: white;
@@ -92,6 +100,7 @@ body {
     animation: fadeInUp 1s ease-out 0.6s both;
 }
 
+/* Two-column grid layout */
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,6 +109,7 @@ body {
     align-items: start;
 }
 
+/* Card styling */
 .card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 2rem;
@@ -112,6 +122,7 @@ body {
     margin-top: 40px;
 }
 
+/* Intro section with styled list */
 .intro-section {
     display: flex;
     text-align: center;
@@ -124,10 +135,12 @@ body {
     border-bottom: 0.15em solid #7a8de0;
 }
 
+/* Alternate animation for even cards */
 .card:nth-child(even) {
     animation: slideInRight 0.8s ease-out;
 }
 
+/* Card heading styling */
 .card h2 {
     color: #4a5568;
     margin-bottom: 20px;
@@ -156,6 +169,7 @@ body {
     font-size: 1.1em;
 }
 
+/* Image container with overlay */
 .image-container {
     position: relative;
     margin: 20px 0;
@@ -171,6 +185,7 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Gradient overlay for images */
 .image-overlay {
     position: absolute;
     bottom: 0;
@@ -182,6 +197,7 @@ body {
     font-weight: bold;
 }
 
+/* Links section layout */
 .links-section {
     display: inline;
     justify-items: center;
@@ -192,7 +208,8 @@ body {
 .links-section a {
     text-decoration: none;
 }
-
+ 
+/* Call-to-action button with shine effect */
 .cta-link {
     display: inline-block;
     padding: 15px 30px;
@@ -207,6 +224,7 @@ body {
     overflow: hidden;
 }
 
+/* Shine animation effect */
 .cta-link::before {
     content: '';
     position: absolute;
@@ -227,6 +245,7 @@ body {
     box-shadow: 0 12px 35px rgba(78, 205, 196, 0.4);
 }
 
+/* Profile image with hover effects */
 .profile-image {
     position: relative;
     width: 15rem;
@@ -251,6 +270,7 @@ body {
     filter: brightness(70%);
 }
 
+/* Social links section */
 #socials {
     margin-top: 90px;
     margin-left: 1rem;
@@ -261,13 +281,13 @@ body {
     text-decoration: none;
 }
 
-/* FAQ css */
-
+/* FAQ Section */
 .wrap{
     max-width: 900px; 
     margin:0 auto;
 }
 
+/* FAQ grid layout */
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -276,6 +296,7 @@ body {
     margin-top: 30px;
 }
 
+/* FAQ question cards */
 .question{
     background: #ffffff;
     border-radius: 20px;
@@ -299,21 +320,30 @@ body {
     line-height: 1.45
 }
 
-/* left items sit in column 1; right items sit in column 2 */
+/* Column positioning for FAQ items */
 .item.left{grid-column:1; margin-right: 30px;}  
 .item.right{grid-column:2; margin-left: 30px;}
 
+/* Mobile FAQ layout */
 @media (max-width:680px)
 {
     .grid{grid-template-columns:1fr;}
     .item.right, .item.left{grid-column:auto}
 }
 
-/* small helper styles for icons/labels */
-.small{display:inline-block; font-size:1; padding:4px 8px; border-radius:999px; background:rgba(15,23,42,0.04); color: #6b7280; margin-bottom:10px}
+/* Helper styles for labels */
+.small
+{
+    display: inline-block; 
+    font-size: 1; 
+    padding: 4px 8px; 
+    border-radius: 999px; 
+    background: rgba(15,23,42,0.04); 
+    color: #6b7280; 
+    margin-bottom: 10px;
+}
 
-/* Dashboard */
-
+/* Dashboard/Study Table */
 .study-table table {
   width: 100%;
   border-collapse: collapse;
@@ -331,6 +361,7 @@ body {
   color: white;
 }
 
+/* Status indicators */
 .sufficient {
   background-color: #c6f6d5; /* green */
   color: #22543d;
@@ -349,7 +380,7 @@ body {
   font-weight: bold;
 }
 
-/* Progress bar */
+/* Progress bar styling */
 .progress-bar {
   width: 100%;
   background: #e2e8f0;
@@ -368,13 +399,14 @@ body {
   height: 100%;
 }
 
-/* Blog post */
+/* Blog Post Styling */
 .blog-feed {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Individual blog post cards */
 .blog-post {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 2rem;
@@ -400,6 +432,7 @@ body {
     padding-bottom: 10px;
 }
 
+/* Blog metadata layout */
 .blog-meta {
     display: flex;
     justify-content: space-between;
@@ -413,6 +446,7 @@ body {
     font-weight: 600;
 }
 
+/* Category badge styling */
 .blog-category {
     background: linear-gradient(135deg, #4ecdc4, #44a08d);
     color: white;
@@ -429,6 +463,7 @@ body {
     font-size: 1.1em;
 }
 
+/* Read more button with shine effect */
 .read-more {
     display: inline-block;
     padding: 12px 25px;
@@ -463,6 +498,7 @@ body {
     box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
 }
 
+/* Mobile responsive styles */
 @media (max-width: 768px) 
 {
     .content-grid {
