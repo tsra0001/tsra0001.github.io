@@ -55,21 +55,25 @@ body {
 }
 
 .navbar h2 a:hover{
-  background-color: #505b8d;
+    background-color: #505b8d;
 }
 
 /* Navigation link styling */
 .navbar ul li a {
     list-style-type: none;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 .navbar ul li a:hover {
-  background-color: #534b92;
+    background-color: #534b92;
+}
+
+.navbar ul li a.active {
+    background-color: #2e265d;
 }
 
 /* Hero section with animations */
