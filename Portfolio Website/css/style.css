@@ -73,7 +73,7 @@ body {
 }
 
 .navbar ul li a.active {
-    background-color: #2e265d;
+    background-color: rgb(81, 69, 155);
 }
 
 /* Hero section with animations */
@@ -278,6 +278,10 @@ body {
 
 #socials a {
     text-decoration: none;
+}
+
+.socials {
+    margin-top: 0;
 }
 
 /* FAQ Section */
