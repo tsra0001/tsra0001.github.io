@@ -1,0 +1,276 @@
+/* Blog Post Styling */
+.blog-feed {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Individual blog post cards */
+.blog-post {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 2rem;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post h2 {
+    color: #4a5568;
+    margin-bottom: 15px;
+    font-size: 2em;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* Blog metadata layout */
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #6b7280;
+}
+
+.blog-date {
+    font-weight: 600;
+}
+
+/* Category badge styling */
+.blog-category {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.blog-excerpt {
+    line-height: 1.6;
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Read more button with shine effect */
+.read-more {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.read-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.read-more:hover::before {
+    left: 100%;
+}
+
+.read-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+}
+
+/* Full blog post and article content */
+.blog-post-full {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 2rem;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blog-article {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* SWOT Analysis Grid */
+.swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.swot-section {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 25px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.swot-section.strengths {
+    border-color: #10b981;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.1));
+}
+
+.swot-section.weaknesses {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(245, 158, 11, 0.1));
+}
+
+.swot-section.opportunities {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(59, 130, 246, 0.1));
+}
+
+.swot-section.threats {
+    border-color: #ef4444;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(239, 68, 68, 0.1));
+}
+
+.swot-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.swot-section h3 {
+    color: #4a5568;
+    margin: 20px 0 10px 0;
+    font-size: 1.2em;
+}
+
+.swot-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Blog and article content typography */
+.blog-content {
+    line-height: 1.7;
+    color: #2d3748;
+}
+
+.blog-content h2 {
+    color: #4a5568;
+    margin: 30px 0 20px 0;
+    font-size: 1.8em;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.blog-content h3 {
+    color: #4a5568;
+    margin: 25px 0 15px 0;
+    font-size: 1.4em;
+}
+
+.blog-content p{
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Technology stack display */
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.tech-category {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    padding: 25px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tech-category h3 {
+    margin-top: 0;
+    color: #4a5568;
+    font-size: 1.2em;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tech-item {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(78, 205, 196, 0.3);
+}
+
+/* Navigation styling */
+.blog-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.back-to-blog,
+.next-post {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+.back-to-blog:hover,
+.next-post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .swot-grid,
+    .tech-stack {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
