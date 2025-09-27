@@ -11,6 +11,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     overflow-x: hidden;
+    padding-top: 3rem;
 }
 
 /* Main content container */
@@ -31,6 +32,12 @@ body {
 .hero h1 {
     font-size: 3.5em;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero h2 {
+    font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1s ease-out 0.3s both;
 }
@@ -116,6 +123,37 @@ body {
     margin-bottom: 20px;
     font-size: 1.1em;
 }
+
+
+
+/* FAQ css */
+.wrap {
+    background-color: white;
+    border-radius: 2rem;
+    margin: auto 2.5rem auto 2.5rem;
+    padding: 30px;
+}
+
+.questionItem h2 {
+    color: #4a5568;
+    font-weight: bold;
+}
+
+.questionItem h2, img {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.questionItem h2 {
+    border-bottom: 3px solid #667eea;
+}
+
+.questionItem img {
+    transform: rotate(-90deg);
+}
+
+
+
 
 /* Image container with overlay */
 .image-container {
@@ -228,78 +266,6 @@ body {
     margin-top: 0;
 }
 
-/* FAQ Section */
-.wrap {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* FAQ grid layout */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px 28px;
-    align-items: start;
-    margin-top: 30px;
-}
-
-/* FAQ question cards */
-.question {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 18px 20px;
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-    border: 1px solid rgba(15, 23, 42, 0.04);
-}
-
-.q {
-    font-weight: 600;
-    margin: 0 0 8px;
-    color: #4a5568;
-    font-size: 1.3em;
-}
-
-.a {
-    color: #2d3748;
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.45
-}
-
-/* Column positioning for FAQ items */
-.item.left {
-    grid-column: 1;
-    margin-right: 30px;
-}
-
-.item.right {
-    grid-column: 2;
-    margin-left: 30px;
-}
-
-/* Mobile FAQ layout */
-@media (max-width:680px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .item.right,
-    .item.left {
-        grid-column: auto
-    }
-}
-
-/* Helper styles for labels */
-.small {
-    display: inline-block;
-    font-size: 1;
-    padding: 4px 8px;
-    border-radius: 999px;
-    background: rgba(15, 23, 42, 0.04);
-    color: #6b7280;
-    margin-bottom: 10px;
-}
-
 /* Dashboard/Study Table */
 .study-table table {
     width: 100%;
@@ -383,6 +349,9 @@ body {
 
 
 
+
+
+
 /* Navbar css */
 .navbar {
   display: flex;
@@ -390,7 +359,11 @@ body {
   justify-content: space-between;
   padding: 1rem 2rem;
   background: #4b2a98;
-  position: relative;
+  position: fixed;
+  top: 0;            /* stick to top */
+  left: 0;
+  width: 100%;       /* span full width */
+  z-index: 1000; 
 }
 
 /* heading pinned left */
