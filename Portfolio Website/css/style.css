@@ -130,13 +130,18 @@ body {
 .wrap {
     background-color: white;
     border-radius: 2rem;
-    margin: auto 2.5rem auto 2.5rem;
+    margin: auto 5rem auto 5rem;
     padding: 30px;
 }
 
-.questionItem h2 {
-    color: #4a5568;
-    font-weight: bold;
+.questionItem {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .questionItem h2, img {
@@ -145,11 +150,32 @@ body {
 }
 
 .questionItem h2 {
-    border-bottom: 3px solid #667eea;
+    color: #4a5568;
+    font-weight: bold;
+    border-bottom: none;
 }
 
 .questionItem img {
     transform: rotate(-90deg);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    transform: rotate(-90deg); /* collapsed by default */
+}
+
+.arrow.open {
+    transform: rotate(0deg); /* expanded */
+}
+
+.a {
+    display: none;
+    margin: 0.5rem 0 1rem 2rem;
+    color: #2d3748;
+}
+
+.a.open {
+    display: block;
 }
 
 

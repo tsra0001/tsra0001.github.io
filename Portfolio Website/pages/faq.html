@@ -32,55 +32,76 @@
         <div class="wrap">
 
             <div class="questionItem">
-                <img src="../assets/down_arrow.png" width="20px" height="20px">
+                <img src="../assets/down_arrow.png" class="arrow" width="20px" height="20px">
                 <h2>How can you print a document from your laptop at HZ?</h2>
-                <p class="a">Connect to the HZ Wi-Fi, open the HZ print portal (usually <code>print.hz.nl</code> or via
-                    the HZ intranet), upload your file or send it to the network printer using the provided drivers.
-                    Authenticate with your HZ username/password at the printer and collect your print job. If you need
-                    drivers, visit the IT pages or use the web print portal.</p>
             </div>
+            <p class="a">Connect to the HZ Wi-Fi, open the HZ print portal (usually <code>print.hz.nl</code> or via
+                the HZ intranet), upload your file or send it to the network printer using the provided drivers.
+                Authenticate with your HZ username/password at the printer and collect your print job. If you need
+                drivers, visit the IT pages or use the web print portal.</p>
 
 
             <div class="questionItem">
-                <img src="../assets/down_arrow.png" width="20px" height="20px">
+                <img src="../assets/down_arrow.png" class="arrow" width="20px" height="20px">
                 <h2>How can you scan a document and send it to your laptop at HZ?</h2>
-                <p class="a">Use any campus multifunction device (scan/copy machine). Choose 'Scan to e-mail' or 'Scan
-                    to USB' on the device. For e-mail, enter your HZ e-mail address and the scanned PDF will arrive in
-                    your inbox. Some devices also support scanning to a network folder or the web scan portal; check the
-                    instructions on the machine or IT intranet.</p>
             </div>
+            <p class="a">Use any campus multifunction device (scan/copy machine). Choose 'Scan to e-mail' or 'Scan
+                to USB' on the device. For e-mail, enter your HZ e-mail address and the scanned PDF will arrive in
+                your inbox. Some devices also support scanning to a network folder or the web scan portal; check the
+                instructions on the machine or IT intranet.</p>
 
 
             <div class="questionItem">
-                <img src="../assets/down_arrow.png" width="20px" height="20px">
+                <img src="../assets/down_arrow.png" class="arrow" width="20px" height="20px">
                 <h2>How can I buy something (like when I sign up for the IT introduction event) on the HZ web
                     shop?</h2>
-                <p class="a">Go to the HZ web shop page linked from the intranet, log in with your HZ account, add the
-                    item or event to your cart and proceed to checkout. Choose invoice or payment method offered
-                    (student/staff options may differ). After purchase you'll receive confirmation by e-mail. If an
-                    event requires registration, follow the event page steps and pay if prompted.</p>
             </div>
+            <p class="a">Go to the HZ web shop page linked from the intranet, log in with your HZ account, add the
+                item or event to your cart and proceed to checkout. Choose invoice or payment method offered
+                (student/staff options may differ). After purchase you'll receive confirmation by e-mail. If an
+                event requires registration, follow the event page steps and pay if prompted.</p>
 
 
             <div class="questionItem">
-                <img src="../assets/down_arrow.png" width="20px" height="20px">
+                <img src="../assets/down_arrow.png" class="arrow" width="20px" height="20px">
                 <h2>How can you book a project space?</h2>
-                <p class="a">Open the HZ room booking system (check the intranet link or 'Room booking' app). Search for
-                    available project spaces on the date and time you need, select the slot, and confirm the booking.
-                    You may be asked to add attendees or a purpose. If you have special equipment needs, contact
-                    Facility Services or the space administrator.</p>
             </div>
+            <p class="a">Open the HZ room booking system (check the intranet link or 'Room booking' app). Search for
+                available project spaces on the date and time you need, select the slot, and confirm the booking.
+                You may be asked to add attendees or a purpose. If you have special equipment needs, contact
+                Facility Services or the space administrator.</p>
 
 
             <div class="questionItem">
-                <img src="../assets/down_arrow.png" width="20px" height="20px">
+                <img src="../assets/down_arrow.png" class="arrow" width="20px" height="20px">
                 <h2>What are the instructions if you want to park your car at the HZ parking lot?</h2>
-                <p class="a">Park only in designated HZ bays. Follow signage and any permit rules (staff/students may
-                    need a permit or to register a plate). Pay at the parking terminal or use the HZ parking app if
-                    required. Observe time limits and accessibility spaces. For long-term or special parking requests
-                    contact Campus Services.</p>
             </div>
+            <p class="a">Park only in designated HZ bays. Follow signage and any permit rules (staff/students may
+                need a permit or to register a plate). Pay at the parking terminal or use the HZ parking app if
+                required. Observe time limits and accessibility spaces. For long-term or special parking requests
+                contact Campus Services.</p>
         </div>
+
+        <script>
+            document.querySelectorAll(".questionItem").forEach((item) => {
+                item.addEventListener("click", () => {
+                    const answer = item.nextElementSibling;
+                    const arrow = item.querySelector(".arrow");
+
+                    // toggle answer visibility + arrow rotation
+                    answer.classList.toggle("open");
+                    arrow.classList.toggle("open");
+
+                    // if the answer just got opened, scroll into view
+                    if (answer.classList.contains("open")) {
+                        answer.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+            });
+        </script>
 </body>
 
 </html>
